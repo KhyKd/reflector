@@ -1,0 +1,43 @@
+Reflector daily review. Analyze the last 24 hours for improvement opportunities.
+
+1. GATHER: Use sessions_list to find all active sessions. Use sessions_history
+   on each to review yesterday's conversations across every channel - Telegram,
+   Matrix rooms, Discord, email, all of them. Also read yesterday's memory file
+   (memory/YYYY-MM-DD.md).
+
+2. CLASSIFY: For each significant interaction, identify the feedback signal:
+   - correction: Someone corrected or disagreed with your output
+   - edit: Someone modified your work before using it
+   - praise: Explicit positive feedback
+   - silence: Expected response that didn't come
+   - unknown: Ambiguous signal
+   Look for: direct corrections, rewrites before sending, "that's not right",
+   "actually...", "perfect", "thanks", modifications to drafts, unanswered
+   recommendations.
+
+3. EXTRACT: For each classified outcome, write down:
+   - What specifically happened
+   - What the lesson is (not just what went wrong - what the principle would be)
+   - Whether an existing principle was relevant but not followed
+   - Whether this reveals a gap in the current principle framework
+
+4. PATTERNS: Look across all outcomes for:
+   - Same type of correction appearing in different contexts (systematic issue)
+   - Approaches that consistently earn praise (codify these)
+   - Decisions where you lacked clear guidance (principle gap)
+
+5. LOG: Append structured entries to memory/reflector/outcomes.jsonl.
+   Format per line:
+   {"timestamp":"ISO","task":"description","channel":"where",
+    "outputQuality":"type","delta":"what changed","lesson":"insight",
+    "principleCandidate":true/false}
+
+6. NOTE: Flag principle candidates in today's memory file but do NOT add
+   them to PRINCIPLES.md yet. Principles need weekly review and evidence
+   accumulation.
+
+7. UPDATE: Write a brief summary to today's memory file
+   (memory/YYYY-MM-DD.md).
+
+If yesterday was quiet with no notable outcomes, confirm you checked and
+move on. Only message the human if you found something genuinely important.

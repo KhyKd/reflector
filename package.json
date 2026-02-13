@@ -1,0 +1,25 @@
+{
+  "name": "openclaw-skill-reflector",
+  "version": "1.0.0",
+  "description": "Structured self-improvement system for OpenClaw agents. Transforms interactions into learning through outcome tracking, daily reviews, and weekly principle refinement.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyKd/reflector.git"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "init": "node scripts/init-reflector.js",
+    "log": "node scripts/log-outcome.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "scripts/",
+    "references/",
+    "prompts/",
+    "SKILL.md",
+    "LICENSE"
+  ]
+}

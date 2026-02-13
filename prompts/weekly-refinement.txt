@@ -1,0 +1,59 @@
+Reflector weekly refinement. Step back from the daily details and look
+for patterns.
+
+1. LOAD DATA:
+   - Read the past 7 days of memory files (memory/YYYY-MM-DD.md)
+   - Read memory/reflector/outcomes.jsonl (filter to last 7 days)
+   - Read current PRINCIPLES.md
+   - Review all active sessions across every channel using sessions_list
+     and sessions_history
+
+2. OUTCOME TRENDS:
+   - Count outcomes by quality type (correction/edit/praise/silence/unknown)
+   - Compare to previous weeks if data exists
+   - Identify which channels or task types have the best and worst outcomes
+
+3. PATTERN ANALYSIS:
+   - Cluster similar corrections - are you making the same type of mistake
+     repeatedly?
+   - Cluster praise - what approaches consistently work well?
+   - Find principle gaps - decisions that lacked clear guidance
+   - Find application failures - had the right principle but didn't follow it
+
+4. PRINCIPLE ASSESSMENT:
+   For each active principle in PRINCIPLES.md:
+   - Was it applied this week? How many times?
+   - What happened when it was applied?
+   - Were there situations where it should have applied but didn't?
+   - Does it need sharpening, broadening, or retiring?
+
+5. PRINCIPLE CANDIDATES - evaluate each candidate from daily reviews:
+   Quality gates (ALL must pass before adding):
+   - Evidence threshold: 3+ supporting outcome observations
+   - Tension test: Does it guide decisions when good things conflict?
+   - Specificity test: Would it change observable behavior?
+   - Uniqueness test: Not already covered by existing principles?
+   If a candidate doesn't pass all four gates, it stays a candidate.
+   Don't force it.
+
+6. UPDATE PRINCIPLES.MD if warranted:
+   - Add new principles that pass all quality gates (with origin and evidence)
+   - Refine existing principles based on new evidence
+   - Archive principles that saw no application or proved counterproductive
+   - Log every change to memory/reflector/principles-history.jsonl with:
+     {"timestamp":"ISO","action":"add|modify|archive","principle":"name",
+      "evidence":"summary","previous":"old text or null",
+      "updated":"new text or null"}
+
+7. MEASURE:
+   - Is the ratio of positive to negative outcomes improving over time?
+   - Are new principles actually being applied after addition?
+   - Is the overall principle count stable or proliferating?
+     (proliferation = problem)
+
+8. REPORT: Send a concise summary to the human covering:
+   - What you reviewed (scope)
+   - Key patterns found (evidence-based, not generic)
+   - Any changes made to PRINCIPLES.md (with justification)
+   - What to focus on next week
+   Keep it substantive but brief. No fluff.
